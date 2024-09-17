@@ -1,0 +1,99 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../Img/FundoLogin.jpg); /* Substitua pelo caminho da imagem de pastelaria */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: rgba(255, 235, 153, 0.9); /* Cor de fundo do formulário com opacidade */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Ajusta o padding para acomodar o ícone */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.textbox i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #4d4d00; /* Cor dos ícones */
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #ffc107; /* Cor do botão */
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    color: #000; /* Cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e6b800; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 10px;
+    }
+
+    .login-box {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .textbox input {
+        padding-left: 35px; /* Ajusta o padding para telas menores */
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

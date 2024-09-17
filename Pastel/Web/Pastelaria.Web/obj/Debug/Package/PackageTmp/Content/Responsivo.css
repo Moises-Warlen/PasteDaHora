@@ -1,0 +1,43 @@
+﻿.table-responsive {
+    margin: 20px 0;
+}
+
+.table td[data-label]::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table td {
+        display: block;
+        width: 100%;
+        text-align: right; /* Mantém o texto alinhado à direita */
+        padding-left: 0; /* Remove o padding lateral esquerdo */
+        padding-right: 15px; /* Adiciona padding à direita para espaçamento */
+        position: relative;
+    }
+
+    .table td::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        padding-left: 15px;
+        text-align: left; /* Mantém os rótulos alinhados à esquerda */
+    }
+
+    .table td:last-child {
+        border-bottom: 0;
+    }
+
+    .table td a {
+        display: block;
+        text-align: center; /* Centraliza os links, como botões de ação */
+    }
+}
