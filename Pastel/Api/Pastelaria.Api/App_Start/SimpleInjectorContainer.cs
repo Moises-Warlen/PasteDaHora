@@ -2,6 +2,7 @@
 using Pastelaria.Domain.Perfil;
 using Pastelaria.Domain.Telefone;
 using Pastelaria.Domain.Teste;
+using Pastelaria.Domain.Usuario;
 using Pastelaria.Repository;
 using Pastelaria.Repository.Infra;
 using SimpleInjector;
@@ -32,6 +33,7 @@ namespace Pastelaria.Api
             Container.Register<IPerfilRepository, PerfilRepository>();
             Container.Register<ITelefoneRepository, TelefoneRepository>();
             Container.Register<IEnderecoRepository, EnderecoRepository>();
+            Container.Register<IUsuarioRepository, UsuarioRepository>();
         }
     }
 }

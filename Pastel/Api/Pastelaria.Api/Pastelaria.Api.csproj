@@ -187,6 +187,7 @@
     <Compile Include="Controllers\PingController.cs" />
     <Compile Include="Controllers\TelefoneController.cs" />
     <Compile Include="Controllers\TesteController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,6 +222,7 @@
     <Folder Include="Views\Endereco\" />
     <Folder Include="Views\Perfil\" />
     <Folder Include="Views\Telefone\" />
+    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pastelaria.Domain\Pastelaria.Domain.csproj">
