@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Endereco\IEnderecoRepository.cs" />
+    <Compile Include="Perfil\Dto\PerfilDto.cs" />
     <Compile Include="Perfil\IPerfilRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tarefa\ITarefaRepository.cs" />
+    <Compile Include="Telefone\Dto\TelefoneDto.cs" />
     <Compile Include="Telefone\ITelefoneRepository.cs" />
     <Compile Include="Teste\Dto\TesteDto.cs" />
     <Compile Include="Teste\ITesteRepository.cs" />
@@ -51,9 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Endereco\Dto\" />
-    <Folder Include="Perfil\Dto\" />
     <Folder Include="Tarefa\Dto\" />
-    <Folder Include="Telefone\Dto\" />
     <Folder Include="Usuario\Dto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

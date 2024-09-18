@@ -8,12 +8,13 @@ namespace Pastelaria.Repository.Infra
     {
         public DatabaseConnection()
         {
-            SqlConnection = new SqlConnection(
-                $"server=10.30.26.4;" +
-                $"Database=GrupoKasilHomolog;" +
-                $"user id=homolog;" +
-                $"password=Homo1452@;" +
-                "Connection Timeout=300"
+           // Configuração da conexão com o banco de dados SQL Server
+                 SqlConnection = new SqlConnection(
+                "Data Source=DESKTOP-NU4F6NT;" + // Nome do servidor
+                "Initial Catalog=PastelDaHora;" + // Nome da base de dados
+                "Integrated Security=True;" + // Usar a autenticação do Windows
+                "Connection Timeout=300" // Tempo limite para conexão (em segundos)
+
             );
         }
 

@@ -2,3 +2,4 @@ C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\bin\Release\Pas
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\bin\Release\Pastelaria.Domain.pdb
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Release\Pastelaria.Domain.dll
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Release\Pastelaria.Domain.pdb
+C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Release\Pastelaria.Domain.csprojResolveAssemblyReference.cache
