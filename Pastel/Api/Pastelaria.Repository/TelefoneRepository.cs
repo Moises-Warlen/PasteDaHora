@@ -15,7 +15,7 @@ namespace Pastelaria.Repository
         // Enumeração que define os procedimentos armazenados (supondo nomes de procedimentos)
         private enum Procedures
         {
-            AdicionarTelefoneUsuario,
+            CadastrarTelefoneUsuario,
             DeletarTelefoneUsuario,
             buscarTodosTelefones,
         }
@@ -26,15 +26,7 @@ namespace Pastelaria.Repository
             using (var r = ExecuteReader())
                 return r.CastEnumerable<TelefoneDto>();
         }
-        public void Post(int idUsuario, TelefoneDto telefone)
-        {
-            ExecuteProcedure(Procedures.AdicionarTelefoneUsuario);  // Chamando procedimento armazenado para adicionar telefone para usuário existente
-            AddParameter("@Telefone", telefone.Telefone);
-            AddParameter("@Tipo", telefone.Tipo);
-            AddParameter("@IdUsuario", idUsuario);
-            ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
-        }
-
+     
         public IEnumerable<TelefoneDto> Get(int? IdUsuario = default(int?), string nome = null)
         {
             ExecuteProcedure(Procedures.buscarTodosTelefones);
@@ -48,6 +40,16 @@ namespace Pastelaria.Repository
         {
             ExecuteProcedure(Procedures.DeletarTelefoneUsuario);
             AddParameter("@IdUsuario", id);
+            ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
+        }
+
+        public void Post(TelefoneDto telefone)
+        {
+            ExecuteProcedure(Procedures.CadastrarTelefoneUsuario);  // Chamando procedimento armazenado para adicionar telefone para usuário existente
+            AddParameter("@IdUsuario", telefone.IdUsuario);  // Adicionando parâmetros para o procedimento armazenado
+            AddParameter("@Telefone", telefone.Telefone);
+            AddParameter("@Tipo", telefone.Tipo);
+
             ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
         }
     }

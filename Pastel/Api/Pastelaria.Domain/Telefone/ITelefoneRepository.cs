@@ -7,11 +7,8 @@ namespace Pastelaria.Domain.Telefone
     {
         IEnumerable<TelefoneDto> Get();
         IEnumerable<TelefoneDto> Get(int? id = null, string nome = null);
-
-        void Post(int idUsuario, TelefoneDto telefone);
-
         void Delete(int id);
-       
+        void Post(TelefoneDto telefone);
     }
 
 

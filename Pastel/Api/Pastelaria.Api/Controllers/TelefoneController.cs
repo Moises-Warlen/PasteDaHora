@@ -1,6 +1,7 @@
-﻿﻿using Pastelaria.Domain.Telefone;
+﻿using Pastelaria.Domain.Telefone;
 using System.Web.Http;
 using Pastelaria.Api.Infra.Configuration;
+using Pastelaria.Domain.Telefone.Dto;
 
 namespace Pastelaria.Api.Controllers
 {
@@ -13,6 +14,13 @@ namespace Pastelaria.Api.Controllers
         public TelefoneController(ITelefoneRepository telefoneRepository)
         {
             _telefoneRepository = telefoneRepository; // Inicializa o repositório de telefone.
+        }
+
+        [HttpPost, Route("adicionar")] // Define que este método responde a requisições HTTP POST na rota "api/telefone/adicionar".
+        public IHttpActionResult Post(TelefoneDto telefone)
+        {
+            _telefoneRepository.Post(telefone); // Chama o método Post do repositório para adicionar um novo telefone.
+            return Ok(); // Retorna uma resposta HTTP 200 OK para indicar que a operação foi realizada com sucesso.
         }
 
         // Endpoint para obter telefones de um usuário específico baseado no ID do usuário.
