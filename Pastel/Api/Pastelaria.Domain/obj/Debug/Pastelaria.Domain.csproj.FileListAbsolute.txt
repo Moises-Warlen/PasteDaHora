@@ -5,6 +5,6 @@ C:\Projetos\ProjetoTesteEstagiarios\Pastel\Api\Pastelaria.Domain\obj\Debug\Paste
 C:\Projetos\ProjetoTesteEstagiarios\Pastel\Api\Pastelaria.Domain\obj\Debug\Pastelaria.Domain.pdb
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\bin\Debug\Pastelaria.Domain.dll
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\bin\Debug\Pastelaria.Domain.pdb
+C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Debug\Pastelaria.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Debug\Pastelaria.Domain.dll
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Debug\Pastelaria.Domain.pdb
-C:\Users\Moises\Desktop\PasteDaHora\Pastel\Api\Pastelaria.Domain\obj\Debug\Pastelaria.Domain.csprojResolveAssemblyReference.cache

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Endereco\Dto\EnderecoDto.cs" />
     <Compile Include="Endereco\IEnderecoRepository.cs" />
     <Compile Include="Perfil\Dto\PerfilDto.cs" />
     <Compile Include="Perfil\IPerfilRepository.cs" />
@@ -52,7 +53,6 @@
     <Compile Include="Usuario\IUsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Endereco\Dto\" />
     <Folder Include="Tarefa\Dto\" />
     <Folder Include="Usuario\Dto\" />
   </ItemGroup>

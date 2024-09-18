@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnderecoRepository.cs" />
     <Compile Include="Infra\BaseRepository.cs" />
     <Compile Include="Infra\DataBaseConnection.cs" />
     <Compile Include="Infra\Extensions\ProcedureExtension.cs" />

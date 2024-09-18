@@ -1,4 +1,5 @@
-﻿using Pastelaria.Domain.Perfil;
+﻿using Pastelaria.Domain.Endereco;
+using Pastelaria.Domain.Perfil;
 using Pastelaria.Domain.Telefone;
 using Pastelaria.Domain.Teste;
 using Pastelaria.Repository;
@@ -30,6 +31,7 @@ namespace Pastelaria.Api
             Container.Register<ITesteRepository, TesteRepository>();
             Container.Register<IPerfilRepository, PerfilRepository>();
             Container.Register<ITelefoneRepository, TelefoneRepository>();
+            Container.Register<IEnderecoRepository, EnderecoRepository>();
         }
     }
 }

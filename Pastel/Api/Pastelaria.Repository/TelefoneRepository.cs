@@ -17,7 +17,7 @@ namespace Pastelaria.Repository
         {
             CadastrarTelefoneUsuario,
             DeletarTelefoneUsuario,
-            buscarTodosTelefones,
+            buscarTodosTelefones
         }
         // Obter todos os telefone
         public IEnumerable<TelefoneDto> Get()
@@ -39,7 +39,7 @@ namespace Pastelaria.Repository
         public void Delete(int id)
         {
             ExecuteProcedure(Procedures.DeletarTelefoneUsuario);
-            AddParameter("@IdUsuario", id);
+            AddParameter("@IdTelefone", id);
             ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
         }
 

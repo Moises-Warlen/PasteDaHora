@@ -14,7 +14,6 @@ namespace Pastelaria.Repository.Infra
                 "Initial Catalog=PastelDaHora;" + // Nome da base de dados
                 "Integrated Security=True;" + // Usar a autenticação do Windows
                 "Connection Timeout=300" // Tempo limite para conexão (em segundos)
-
             );
         }
 
