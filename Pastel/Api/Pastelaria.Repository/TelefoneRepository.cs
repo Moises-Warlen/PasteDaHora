@@ -15,41 +15,47 @@ namespace Pastelaria.Repository
         // Enumeração que define os procedimentos armazenados (supondo nomes de procedimentos)
         private enum Procedures
         {
-            CadastrarTelefoneUsuario,
+            AdicionarTelefoneUsuario,
             DeletarTelefoneUsuario,
-            buscarTodosTelefones
+            DeletarTelefone,
+            ListarTodosTelefones,
         }
         // Obter todos os telefone
         public IEnumerable<TelefoneDto> Get()
         {
-            ExecuteProcedure(Procedures.buscarTodosTelefones);
+            ExecuteProcedure(Procedures.ListarTodosTelefones);
             using (var r = ExecuteReader())
                 return r.CastEnumerable<TelefoneDto>();
         }
-     
+        public void Post(int idUsuario, TelefoneDto telefone)
+        {
+            ExecuteProcedure(Procedures.AdicionarTelefoneUsuario);  // Chamando procedimento armazenado para adicionar telefone para usuário existente
+            AddParameter("@Telefone", telefone.Telefone);
+            AddParameter("@Tipo", telefone.Tipo);
+            AddParameter("@IdUsuario", idUsuario);
+            ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
+        }
+
         public IEnumerable<TelefoneDto> Get(int? IdUsuario = default(int?), string nome = null)
         {
-            ExecuteProcedure(Procedures.buscarTodosTelefones);
+            ExecuteProcedure(Procedures.ListarTodosTelefones);
 
             AddParameter("@IdUsuario", IdUsuario);
             using (var r = ExecuteReader())
                 return r.CastEnumerable<TelefoneDto>();
         }
 
-        public void Delete(int id)
+        public void DeletePorUsuario(int id)
         {
             ExecuteProcedure(Procedures.DeletarTelefoneUsuario);
-            AddParameter("@IdTelefone", id);
+            AddParameter("@IdUsuario", id);
             ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
         }
 
-        public void Post(TelefoneDto telefone)
+        public void Delete(int id)
         {
-            ExecuteProcedure(Procedures.CadastrarTelefoneUsuario);  // Chamando procedimento armazenado para adicionar telefone para usuário existente
-            AddParameter("@IdUsuario", telefone.IdUsuario);  // Adicionando parâmetros para o procedimento armazenado
-            AddParameter("@Telefone", telefone.Telefone);
-            AddParameter("@Tipo", telefone.Tipo);
-
+            ExecuteProcedure(Procedures.DeletarTelefone);
+            AddParameter("@IdTelefone", id);
             ExecuteNonQuery();  // Executando comando não-query (operação de inserção)
         }
     }

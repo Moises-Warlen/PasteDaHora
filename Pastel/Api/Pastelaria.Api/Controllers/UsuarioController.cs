@@ -47,5 +47,37 @@ namespace Pastelaria.Api.Controllers
             _usuarioRepository.PutDesativaUsuario(idUsuario);
             return Ok();
         }
+
+        [HttpPost, Route("")]
+        public IHttpActionResult Post(UsuariosDto usuario)
+        {
+            if (usuario.IdUsuario > 0)
+                return Put(usuario);
+            var idUsuario = _usuarioRepository.Post(usuario);
+
+            foreach (var endereco in usuario.Enderecos)
+                _enderecoRepository.Post(idUsuario, endereco);
+
+            foreach (var telefone in usuario.Telefones)
+                _telefoneRepository.Post(idUsuario, telefone);
+
+            return Ok();
+        }
+        [HttpPut, Route("")]
+        public IHttpActionResult Put(UsuariosDto usuario)
+        {
+            _usuarioRepository.Put(usuario);
+
+            _enderecoRepository.DeletePorUsuario(usuario.IdUsuario);
+            foreach (var endereco in usuario.Enderecos)
+                _enderecoRepository.Post(usuario.IdUsuario, endereco);
+
+            _telefoneRepository.DeletePorUsuario(usuario.IdUsuario);
+            foreach (var telefone in usuario.Telefones)
+                _telefoneRepository.Post(usuario.IdUsuario, telefone);
+
+            return Ok();
+        }
+
     }
 }

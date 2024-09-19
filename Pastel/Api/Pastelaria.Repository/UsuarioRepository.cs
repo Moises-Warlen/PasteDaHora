@@ -39,7 +39,7 @@ namespace Pastelaria.Repository
                     var usuario = r.Cast<UsuariosDto>();  // Converte os dados lidos para um objeto UsuariosDto
                     usuario.Perfil = new PerfilDto()
                     {
-                        Tipo = r.ReadAttr<string>("NomePerfil"),
+                        Tipo = r.ReadAttr<string>("Perfil"),
                         IdPerfil = r.ReadAttr<int>("IdPerfil")
                     };
                     usuarios.Add(usuario);  // Adiciona o usuário à lista
@@ -49,11 +49,11 @@ namespace Pastelaria.Repository
             }
         }
 
-
         // Insere um novo usuário
         public int Post(UsuariosDto usuario)
         {
             ExecuteProcedure(Procedures.AdicionarUsuario); // Executa o procedimento armazenado para inserir um usuário
+
             // Adiciona parâmetros para os dados do usuário
             AddParameter("@Nome", usuario.Nome);
             AddParameter("@Email", usuario.Email);
@@ -62,21 +62,6 @@ namespace Pastelaria.Repository
             AddParameter("@Ind_Ativo", true);
             AddParameter("@IdPerfil", usuario.Perfil.IdPerfil);
             return ExecuteNonQueryWithReturn<int>();  // Executa o comando e retorna o ID do novo usuário
-        }
-
-        // Atualiza um usuário existente
-        public void Put(UsuariosDto usuario)
-        {
-            ExecuteProcedure(Procedures.AtualizarUsuario);  // Executa o procedimento armazenado para atualizar um usuário
-            // Adiciona parâmetros para os dados do usuário
-            AddParameter("@IdUsuario", usuario.IdUsuario);
-            AddParameter("@Nome", usuario.Nome);
-            AddParameter("@Email", usuario.Email);
-            AddParameter("@Senha", usuario.Senha);
-            AddParameter("@DataNascimento", usuario.DataNascimento);
-            AddParameter("@Ind_Ativo", true);
-            AddParameter("@IdPerfil", usuario.Perfil.IdPerfil);
-            ExecuteNonQuery();  // Executa o comando para atualizar o usuário
         }
 
         // Desativa um usuário e retorna as informações do usuário desativado
@@ -137,5 +122,21 @@ namespace Pastelaria.Repository
         {
             throw new NotImplementedException();  // Lança uma exceção indicando que o método não foi implementado
         }
+
+        // Atualiza um usuário existente
+        public void Put(UsuariosDto usuario)
+        {
+            ExecuteProcedure(Procedures.AtualizarUsuario);  // Executa o procedimento armazenado para atualizar um usuário
+            // Adiciona parâmetros para os dados do usuário
+            AddParameter("@IdUsuario", usuario.IdUsuario);
+            AddParameter("@Nome", usuario.Nome);
+            AddParameter("@Email", usuario.Email);
+            AddParameter("@Senha", usuario.Senha);
+            AddParameter("@DataNascimento", usuario.DataNascimento);
+            AddParameter("@Ind_Ativo", true);
+            AddParameter("@IdPerfil", usuario.Perfil.IdPerfil);
+            ExecuteNonQuery();  // Executa o comando para atualizar o usuário
+        }
+
     }
 }

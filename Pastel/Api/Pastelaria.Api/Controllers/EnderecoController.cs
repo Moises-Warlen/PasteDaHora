@@ -14,12 +14,12 @@ namespace Pastelaria.Api.Controllers
             _enderecoRepository = enderecoRepository;  
         }
        
-        [HttpPost, Route("adicionar")] 
-        public IHttpActionResult Post(EnderecoDto endereco)
-        {
-            _enderecoRepository.Post(endereco);
-            return Ok(); 
-        }
+        //[HttpPost, Route("adicionar")] 
+        //public IHttpActionResult Post(EnderecoDto endereco)
+        //{
+        //    _enderecoRepository.Post(endereco);
+        //    return Ok(); 
+        //}
 
         [HttpGet, Route("{id}")]
         public IHttpActionResult Get(int id)

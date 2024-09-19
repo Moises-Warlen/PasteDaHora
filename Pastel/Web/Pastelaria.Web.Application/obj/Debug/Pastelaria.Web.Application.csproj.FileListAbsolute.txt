@@ -25,6 +25,5 @@ C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\bin\De
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\bin\Debug\System.Net.Http.xml
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\bin\Debug\System.Net.Http.WebRequest.xml
-C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\obj\Debug\Pastelaria.Web.Application.csprojResolveAssemblyReference.cache
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\obj\Debug\Pastelaria.Web.Application.dll
 C:\Users\Moises\Desktop\PasteDaHora\Pastel\Web\Pastelaria.Web.Application\obj\Debug\Pastelaria.Web.Application.pdb
